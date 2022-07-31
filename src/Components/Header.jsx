@@ -2,14 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { CgMenuLeft } from 'react-icons/cg';
 import { MdNotificationsNone } from 'react-icons/md';
-import SideNav from './SideNav';
-import SearchBar from './SearchBar';
+import { useContext } from 'react';
+import { SideNavContext } from '../Contexts/SideNavContext';
 
 function Header() {
+  const { handleTogleNav } = useContext(SideNavContext);
+
   return (
     <DivHeader>
       <DivSideNav>
-        <CgMenuLeft />
+        <CgMenuLeft onClick={() => handleTogleNav()} />
       </DivSideNav>
       <p>Home</p>
       <DivNotification>
