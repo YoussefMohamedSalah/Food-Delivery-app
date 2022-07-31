@@ -7,6 +7,8 @@ import SubSignUp from './Pages/Log/SubSignUp';
 import Main from './Pages/Main/Main.jsx';
 import { SideNavContext } from './Contexts/SideNavContext';
 import Orders from './Pages/Orders/Orders';
+import OrderDetails from './Pages/Orders/OrderDetails';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [sideNav, setSideNav] = useState('none');
@@ -23,6 +25,7 @@ function App() {
           <Route path="/signin" element={<SubSignIn />} />
           <Route path="/main" element={<Main />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/orderdetails" element={<OrderDetails />} />
         </Routes>
       </div>
     </SideNavContext.Provider>

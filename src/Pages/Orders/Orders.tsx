@@ -71,7 +71,9 @@ function Orders() {
           {changeTab()}
         </DivOrderPageContent>
         <DivPlaceOrderBtn>
-          <PlaceOrderBtn>Place Order</PlaceOrderBtn>
+          <PlaceOrderBtn onClick={() => Navigate('/orderdetails')}>
+            Place Order
+          </PlaceOrderBtn>
         </DivPlaceOrderBtn>
       </DivPageWrapper>
     </>
